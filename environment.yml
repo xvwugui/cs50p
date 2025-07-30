@@ -1,0 +1,30 @@
+# 环境名称
+name: cs50p
+
+# Conda 渠道
+channels:
+  - conda-forge
+  - defaults
+
+# 依赖包列表
+dependencies:
+  # 基础 Python 环境
+  - python=3.10
+
+  # CS50P 课程中用于编写测试的核心库
+  - pytest
+
+  # 课程中网络编程部分会用到的库
+  - requests
+
+  # 课程中图像处理部分会用到的库
+  - pillow
+
+  # 声明我们需要在这个环境中使用 pip
+  - pip
+
+  # 使用 pip 来安装 conda 渠道中没有的、课程专属的库
+  - pip:
+    - cs50
+    - check50
+    - submit50
